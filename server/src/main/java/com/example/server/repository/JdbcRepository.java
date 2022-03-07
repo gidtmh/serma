@@ -4,7 +4,7 @@ package com.example.server.repository;
 
 import java.util.List;
 
-import com.example.server.model.Participant;
+import com.example.server.model.Employee;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.IncorrectResultSizeDataAccessException;
@@ -15,27 +15,27 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class JdbcRepository implements ParticipantRepository {
 
-    @Autowired
+/*    @Autowired
     private JdbcTemplate jdbcTemplate;
 
     @Override
-    public int save(Participant participant) {
+    public int save(Employee employee) {
         return jdbcTemplate.update("INSERT INTO participants (name, contact, attending) VALUES(?,?,?)",
-        new Object[] { participant.getName(), participant.getContact(), participant.isAttending()});
+        new Object[] { employee.getName(), employee.getContact(), employee.isAttending()});
     }
 
     @Override
-    public int update(Participant participant) {
+    public int update(Employee employee) {
         return jdbcTemplate.update("UPDATE participants SET name=?, contact=?, attending=? WHERE id=?",
-        new Object[] { participant.getId(), participant.getName(), participant.getContact()});
+        new Object[] { employee.getId(), employee.getName(), employee.getContact()});
     }
 
     @Override
-    public Participant findById(Long id) {
+    public Employee findById(Long id) {
         try {
-            Participant participant = jdbcTemplate.queryForObject("SELECT * FROM participants WHERE id=?",
-                BeanPropertyRowMapper.newInstance(Participant.class), id);
-            return participant;
+            Employee employee = jdbcTemplate.queryForObject("SELECT * FROM participants WHERE id=?",
+                BeanPropertyRowMapper.newInstance(Employee.class), id);
+            return employee;
           } catch (IncorrectResultSizeDataAccessException e) {
             return null;
           }
@@ -47,25 +47,26 @@ public class JdbcRepository implements ParticipantRepository {
     }
 
     @Override
-    public List<Participant> findAll() {
-        return jdbcTemplate.query("SELECT * from participants", BeanPropertyRowMapper.newInstance(Participant.class));
+    public List<Employee> findAll() {
+        return jdbcTemplate.query("SELECT * from participants", BeanPropertyRowMapper.newInstance(
+            Employee.class));
     }
 
     @Override
-    public List<Participant> findByAttending(boolean attending) {
+    public List<Employee> findByAttending(boolean attending) {
         return jdbcTemplate.query("SELECT * from participants WHERE attending=?",
-        BeanPropertyRowMapper.newInstance(Participant.class), attending);
+        BeanPropertyRowMapper.newInstance(Employee.class), attending);
     }
 
     @Override
-    public List<Participant> findByNameContaining(String name) {
+    public List<Employee> findByNameContaining(String name) {
         String q = "SELECT * from participants WHERE name LIKE '%" + name + "%'";
-    return jdbcTemplate.query(q, BeanPropertyRowMapper.newInstance(Participant.class));
+    return jdbcTemplate.query(q, BeanPropertyRowMapper.newInstance(Employee.class));
     }
 
     @Override
     public int deleteAll() {
         return jdbcTemplate.update("DELETE from participants");
     }
-    
+    */
 }

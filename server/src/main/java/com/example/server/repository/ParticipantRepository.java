@@ -2,18 +2,18 @@ package com.example.server.repository;
 
 import java.util.List;
 
-import com.example.server.model.Participant;
+import com.example.server.model.Employee;
 
 public interface ParticipantRepository {
 
     //save and update -> is it book or participant
-    int save (Participant book);
-    int update (Participant book);
+/*    int save (Employee book);
+    int update (Employee book);
 
-    Participant findById(Long id);
+    Employee findById(Long id);
     int deleteById(Long id);
-    List<Participant> findAll();
-    List<Participant> findByAttending(boolean attending);
-    List<Participant> findByNameContaining(String name);
-    int deleteAll();
+    List<Employee> findAll();
+    List<Employee> findByAttending(boolean attending);
+    List<Employee> findByNameContaining(String name);
+    int deleteAll();*/
 }
