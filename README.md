@@ -1,6 +1,7 @@
 # IBF Final Project - Events App
 
 Optional
+
 Sending email - 4
 
 JWT Token authentication - 6
