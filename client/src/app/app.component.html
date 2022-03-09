@@ -1,28 +1,21 @@
-<div>
-  <nav class="navbar navbar-expand navbar-dark bg-dark">
-    <a href="#" class="navbar-brand">Event Planner</a>
-    <div class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a routerLink="participants" class="nav-link">Participants</a>
-      </li>
-      <li class="nav-item">
-        <a routerLink="add" class="nav-link">Add</a>
-      </li>
-      <li class="nav-item">
-        <a routerLink="overview" class="nav-link" *ngIf="isAdminRole()">Overview</a>
-      </li>
-      <li class="nav-item">
-        <a routerLink="login" class="nav-link" *ngIf="!isAuthenticated()">Login</a>
-      </li>
-      <li class="nav-item" *ngIf="isAuthenticated()">
-        <a routerLink="login" class="nav-link">{{ authenticatedUsername() }}</a>
-      </li>
-      <li class="nav-item" *ngIf="isAuthenticated()">
-        <a routerLink="login" class="nav-link" (click)="logout()">Logout</a>
-      </li>
-    </div>
-  </nav>
-  <div class="container mt-3">
-    <router-outlet></router-outlet>
-  </div>
+<div class="topnav" *ngIf="username" >
+  <a (click)="createSearch()" >Event search</a>
+  <a (click)="createEvent()" >Create Event</a>
+  <a (click)="find()" >Find Us</a>
+  <a (click)="logout()" >Log Out</a>
 </div>
+
+
+<div class="content" role="main" >
+
+ 
+  <router-outlet></router-outlet>
+  
+
+ 
+</div>
+
+
+
+
+

@@ -1,37 +1,33 @@
-import {Component} from '@angular/core';
-import {AuthService} from "./services/auth/auth.service";
-import {BehaviorSubject, Observable} from "rxjs";
-import {User} from "./models/user.model";
-import {Role} from "./models/role.model";
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'client';
-  private userSubject: BehaviorSubject<User>;
-  public user: Observable<User>;
-
-  constructor(private authService: AuthService) {
-    this.userSubject = new BehaviorSubject<User>(new User());
-    this.user = this.userSubject.asObservable();
+export class AppComponent implements OnInit {
+  title = 'eventApp';
+  username;
+  ngOnInit(): void {
+    this.username= localStorage.getItem('username');
   }
+  constructor(private route: Router){
 
-  isAuthenticated(): boolean {
-    return this.authService.isAuthenticated();
   }
-
-  authenticatedUsername(): string | null {
-    return this.authService.getAuthenticatedUsername;
+  logout(){
+    localStorage.removeItem('username');
+    localStorage.removeItem('token');
+    this.route.navigate(['']);
   }
-
-  logout() {
-    this.authService.logout();
+  createEvent(){
+    this.route.navigate(['event/create']);
   }
-
-  isAdminRole(): boolean {
-    return this.authService.getAuthenticatedUserRole() === Role.Admin;
+  createSearch(){
+    this.route.navigate(['']);
+  }
+  find(){
+    this.route.navigate(['find']);
+    
   }
 }

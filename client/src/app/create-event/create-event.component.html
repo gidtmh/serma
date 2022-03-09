@@ -1,0 +1,28 @@
+<div  class="main-container">
+    <div class="box">
+        <h2>Create Event</h2>
+        <form>
+          <div class="input-box">
+            <input #name type="text" name="" required="true">
+            <label>Name</label>
+          </div>
+          <div class="input-box">
+            <input  #loc type="text" name="" required="true">
+            <label>location</label>
+          </div>
+          <div class="input-box">
+            <input  #date type="date" name="" required="true">
+          </div>
+
+          <div class="input-box">
+            <input  #time type="text" name="" required="true">
+            <label>time</label>
+          </div>
+          <div style="justify-content: center;">
+            <input type="button" (click)="createEvent(name.value,loc.value,date.value,time.value)" value="Create"> 
+          </div>
+          
+        </form>
+        
+      </div>
+</div>

@@ -1,48 +1,39 @@
-import {NgModule} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
-import {AppRoutingModule} from './app-routing.module';
-import {AppComponent} from './app.component';
-import {AddComponent} from './components/add/add.component';
-import {LoginComponent} from './components/login/login.component';
-import {DetailsComponent} from './components/details/details.component';
-import {ListComponent} from './components/list/list.component';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatListModule} from '@angular/material/list';
-import {MatSelectModule} from '@angular/material/select';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {OverviewComponent} from "./components/overview/overview.component";
-import {MatOptionModule} from "@angular/material/core";
-import {EmployeeHomeComponent} from "./components/employee-home/employee-home.component";
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { LoginComponent } from './login/login.component';
+import { CreateEventComponent } from './create-event/create-event.component';
+import { ShowEventsComponent } from './show-events/show-events.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AlertModule } from 'ngx-alerts';
+import { SearchPipe } from './SearchPipe';
+import { FormsModule } from '@angular/forms';
+import { AgmCoreModule } from '@agm/core';
+import { FindUsComponent } from './find-us/find-us.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddComponent,
     LoginComponent,
-    DetailsComponent,
-    ListComponent,
-    OverviewComponent,
-    EmployeeHomeComponent
+    CreateEventComponent,
+    ShowEventsComponent,
+    SearchPipe,
+    FindUsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule,
     HttpClientModule,
-    MatSnackBarModule,
-    BrowserAnimationsModule,
-    MatListModule,
-    MatSelectModule,
-    MatOptionModule,
-    MatFormFieldModule
+    FormsModule,
+    AlertModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyB3bsqvhjReqEYRibcHDirPyvfOvpY_ulA'
+    }),
+    AlertModule.forRoot({maxMessages: 5, timeout: 5000, positionX: 'right'})
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-}
+export class AppModule { }

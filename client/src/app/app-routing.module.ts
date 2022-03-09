@@ -1,27 +1,40 @@
-import {NgModule} from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
-import {AddComponent} from './components/add/add.component';
-import {DetailsComponent} from './components/details/details.component';
-import {ListComponent} from './components/list/list.component';
-import {LoginComponent} from "./components/login/login.component";
-import {OverviewComponent} from "./components/overview/overview.component";
-import {EmployeeHomeComponent} from "./components/employee-home/employee-home.component";
-import {AuthGuard} from './helpers/authguard';
-import {Role} from "./models/role.model";
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { CreateEventComponent } from './create-event/create-event.component';
+import { FindUsComponent } from './find-us/find-us.component';
+import { LoginComponent } from './login/login.component';
+import { ShowEventsComponent } from './show-events/show-events.component';
+
 
 const routes: Routes = [
-  /*{path: '', redirectTo: 'participants', pathMatch: 'full'},*/
-  {path: 'participants', component: ListComponent},
-  {path: 'participants/:id', component: DetailsComponent},
-  {path: 'add', component: AddComponent},
-  {path: 'login', component: LoginComponent},
-  {path: 'overview', component: OverviewComponent, canActivate: [AuthGuard], data: {roles: [Role.Admin]}},
-  {path: '', component: EmployeeHomeComponent, canActivate: [AuthGuard], data: {roles: [Role.Employee]}}
+
+  {
+    path: '',
+    component: LoginComponent
+    // loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+  },
+  {
+    path: 'event/create',
+    component: CreateEventComponent
+    // loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+  },
+  {
+    path: 'event/view',
+    component: ShowEventsComponent
+    // loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+  },
+  
+  {
+    path: 'find',
+    component: FindUsComponent
+    // loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+  },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {useHash: true})],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule {
-}
+
+ }
