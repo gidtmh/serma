@@ -1,0 +1,31 @@
+<div  class="main-container">
+   
+       
+            <div style="text-align:center" class="input-box" >
+    <input style="margin-top: 50px;" type="text" [(ngModel)]="name" placeholder="Search any fields"/>
+    <br>
+    <br>
+
+    </div>
+
+
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>name</th>
+        <th>organiser</th>
+        <th>location</th>
+        <th>date</th>
+        <th>time</th>
+      </tr>
+      <tr *ngFor="let event of eventData| CustomeventFilter:name;let i = index" style="background-color: #69a9a3;">
+        <td>{{event.id}}</td>
+        <td>{{event.name}}</td>
+        <td>{{event.organiser}}</td>
+        <td>{{event.location}}</td>
+        <td>{{event.date}}</td>
+        <td>{{event.time}}</td>
+      </tr>
+  </table>
+</div>

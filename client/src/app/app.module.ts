@@ -12,6 +12,7 @@ import { SearchPipe } from './SearchPipe';
 import { FormsModule } from '@angular/forms';
 import { AgmCoreModule } from '@agm/core';
 import { FindUsComponent } from './find-us/find-us.component';
+import {NgbPaginationModule, NgbAlertModule, NgbDatepicker} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,9 @@ import { FindUsComponent } from './find-us/find-us.component';
     HttpClientModule,
     FormsModule,
     AlertModule,
+    NgbPaginationModule,
+    NgbAlertModule,
+    NgbDatepicker,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyB3bsqvhjReqEYRibcHDirPyvfOvpY_ulA'
     }),

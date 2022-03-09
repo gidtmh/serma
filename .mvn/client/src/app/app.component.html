@@ -1,0 +1,22 @@
+<div class="topnav"  >
+  <a>{{username}}</a>
+  <a (click)="createSearch()" >Event search</a>
+  <a (click)="createEvent()" >Create Event</a>
+  <a (click)="find()" >Find Us</a>
+  <a *ngIf="username" (click)="logout()" >Log Out</a>
+</div>
+
+
+<div class="content" role="main" >
+
+ 
+  <router-outlet></router-outlet>
+  
+
+ 
+</div>
+
+
+
+
+
