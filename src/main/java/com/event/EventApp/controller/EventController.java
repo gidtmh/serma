@@ -16,6 +16,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 @RequestMapping(value = "api")
@@ -47,7 +48,7 @@ public class EventController {
         return  new ResponseEntity<>(user, HttpStatus.CREATED);
     }
 
-    @RequestMapping(value = "authenticate")
+    @PostMapping(value = "authenticate")
     @ResponseBody
     public Object login(@RequestBody AuthenticationRequest authenticationRequest) {
         Authentication authenticate = authenticationManager.authenticate(
@@ -77,6 +78,15 @@ public class EventController {
         }
         List<Event> eventList=eventRepository.findAll();
         return new ResponseEntity<>(eventList, HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "random")
+    @ResponseBody
+    public Object random() {
+        String externalApi="https://www.boredapi.com/api/activity";
+        RestTemplate template=new RestTemplate();
+        Random result= template.getForObject(externalApi,Random.class);
+        return new ResponseEntity<>(result, HttpStatus.OK);
     }
 
     void sendEmail(String message) {

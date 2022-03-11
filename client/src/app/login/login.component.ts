@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
   }
   signup(username,password){
     this.apiService.signUp(username,password,this.type).subscribe((data:  Array<object>) => {
-      this.alertService.success("Sign in Success, Please login!!");
+      this.alertService.success("Registration Success, Please login!!");
       this.showingLogin();
       
     });
@@ -46,7 +46,7 @@ export class LoginComponent implements OnInit {
       localStorage.setItem("username", username);
       this.route.navigate(['event/view']);
     }, error => {
-      this.alertService.danger("login Failed !!");  
+      this.alertService.danger("Login Failed !!");  
     })
 
   }

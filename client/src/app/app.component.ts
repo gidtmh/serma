@@ -21,12 +21,19 @@ export class AppComponent implements OnInit {
     this.route.navigate(['']);
   }
   createEvent(){
+    this.username= localStorage.getItem('username');
     this.route.navigate(['event/create']);
   }
   createSearch(){
+    this.username= localStorage.getItem('username');
     this.route.navigate(['']);
   }
+  publicEvent(){
+    this.username= localStorage.getItem('username');
+    this.route.navigate(['event/public']);
+  }
   find(){
+    this.username= localStorage.getItem('username');
     this.route.navigate(['find']);
     
   }

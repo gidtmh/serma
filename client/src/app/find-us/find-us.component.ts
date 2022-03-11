@@ -7,11 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FindUsComponent implements OnInit {
   title = 'My first AGM project';
-  lat = 51.678418;
-  lng = 7.809007;
+  lat = 1.3421;
+  lng = 103.76;
   constructor() { }
 
   ngOnInit() {
   }
+  
   
 }

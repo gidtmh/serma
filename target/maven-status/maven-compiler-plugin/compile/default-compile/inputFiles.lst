@@ -1,0 +1,15 @@
+/Users/gideontay/Desktop/Code/Serma2/serma2/src/main/java/com/event/EventApp/config/CustomCorsFilter.java
+/Users/gideontay/Desktop/Code/Serma2/serma2/src/main/java/com/event/EventApp/EventAppApplication.java
+/Users/gideontay/Desktop/Code/Serma2/serma2/src/main/java/com/event/EventApp/repository/UserRepository.java
+/Users/gideontay/Desktop/Code/Serma2/serma2/src/main/java/com/event/EventApp/model/ApiResponse.java
+/Users/gideontay/Desktop/Code/Serma2/serma2/src/main/java/com/event/EventApp/repository/EventRepository.java
+/Users/gideontay/Desktop/Code/Serma2/serma2/src/main/java/com/event/EventApp/controller/EventController.java
+/Users/gideontay/Desktop/Code/Serma2/serma2/src/main/java/com/event/EventApp/model/AuthenticationResponse.java
+/Users/gideontay/Desktop/Code/Serma2/serma2/src/main/java/com/event/EventApp/model/User.java
+/Users/gideontay/Desktop/Code/Serma2/serma2/src/main/java/com/event/EventApp/util/JwtUtil.java
+/Users/gideontay/Desktop/Code/Serma2/serma2/src/main/java/com/event/EventApp/config/JwtRequestFilter.java
+/Users/gideontay/Desktop/Code/Serma2/serma2/src/main/java/com/event/EventApp/service/MyUserDetailsService.java
+/Users/gideontay/Desktop/Code/Serma2/serma2/src/main/java/com/event/EventApp/model/Event.java
+/Users/gideontay/Desktop/Code/Serma2/serma2/src/main/java/com/event/EventApp/config/SecurityConfigurer.java
+/Users/gideontay/Desktop/Code/Serma2/serma2/src/main/java/com/event/EventApp/model/AuthenticationRequest.java
+/Users/gideontay/Desktop/Code/Serma2/serma2/src/main/java/com/event/EventApp/model/Random.java

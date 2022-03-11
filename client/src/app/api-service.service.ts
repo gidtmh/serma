@@ -10,7 +10,7 @@ export class ApiServiceService {
   constructor(private  httpClient:  HttpClient) {
     
   }
-  baseUrl="http://localhost:8080/api";
+  baseUrl="http://68.183.190.237:8080/api";
 
   signUp(userId,pass,type){
     let headers = new Headers();
@@ -42,5 +42,8 @@ viewEvent(){
   headers.append('Content-Type','application/json');
   const options = {headers: {'Content-Type': 'application/json','Authorization':'Bearer '+localStorage.getItem('token')}};
   return this.httpClient.get(this.baseUrl+'/event?id=-1',options)
+}
+randomApi(){
+  return this.httpClient.get(this.baseUrl+'/random');
 }
 }

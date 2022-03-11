@@ -12,7 +12,7 @@ import { SearchPipe } from './SearchPipe';
 import { FormsModule } from '@angular/forms';
 import { AgmCoreModule } from '@agm/core';
 import { FindUsComponent } from './find-us/find-us.component';
-import {NgbPaginationModule, NgbAlertModule, NgbDatepicker} from '@ng-bootstrap/ng-bootstrap';
+import { PublicEventComponent } from './public-event/public-event.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,8 @@ import {NgbPaginationModule, NgbAlertModule, NgbDatepicker} from '@ng-bootstrap/
     CreateEventComponent,
     ShowEventsComponent,
     SearchPipe,
-    FindUsComponent
+    FindUsComponent,
+    PublicEventComponent
   ],
   imports: [
     BrowserModule,
@@ -29,11 +30,8 @@ import {NgbPaginationModule, NgbAlertModule, NgbDatepicker} from '@ng-bootstrap/
     HttpClientModule,
     FormsModule,
     AlertModule,
-    NgbPaginationModule,
-    NgbAlertModule,
-    NgbDatepicker,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyB3bsqvhjReqEYRibcHDirPyvfOvpY_ulA'
+      apiKey: 'AIzaSyCT93RYIhxmsuhORTnq3p7IS-cjwwxeZAA'
     }),
     AlertModule.forRoot({maxMessages: 5, timeout: 5000, positionX: 'right'})
   ],

@@ -13,7 +13,12 @@ export class CreateEventComponent implements OnInit {
   constructor(private apiService: ApiServiceService,private route: Router) { }
 
   ngOnInit() {
+    var username= localStorage.getItem('username');
+    if(!username){
+      this.route.navigate(['']);
+    }
   }
+
   createEvent(name,loc,date,time){
     var userName=localStorage.getItem("username");
     var event : Event =new Event();

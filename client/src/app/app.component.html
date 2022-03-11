@@ -1,8 +1,10 @@
-<div class="topnav" *ngIf="username" >
+<div class="topnav"  >
+  <a>{{username}}</a>
   <a (click)="createSearch()" >Event search</a>
   <a (click)="createEvent()" >Create Event</a>
+  <a (click)="publicEvent()" >Random</a>
   <a (click)="find()" >Find Us</a>
-  <a (click)="logout()" >Log Out</a>
+  <a *ngIf="username" (click)="logout()" >Log Out</a>
 </div>
 
 
