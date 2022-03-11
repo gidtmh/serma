@@ -1,4 +1,5 @@
-# IBF Final
+# IBF Final Project
+
 
 Local setup instructions
 Clone repo in local.
