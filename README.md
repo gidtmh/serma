@@ -1,14 +1,6 @@
 # IBF Final Project
 
 
-Local setup instructions
-Clone repo in local.
-cd to client folder and run below 2 commands.
-npm install
-ng serve
-Run the main class in com.event.EventApp package.
-import SQL script in Mysql Workbench.
-hit localhost:4200 in browser.
+Event Management App for NUS-ISS IBF 2021 project.
 
-Note: Please change the usename password of mysql in application.properties file.
-
+Deployment details in setup.txt file
