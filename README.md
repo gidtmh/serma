@@ -3,6 +3,8 @@
 
 Event Management App for NUS-ISS IBF 2021 project.
 
+Digital Ocean URL: http://68.183.190.237:8080
+
 Deployment details in setup.txt file
 
 Optional Requirements:
